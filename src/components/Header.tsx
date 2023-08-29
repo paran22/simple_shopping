@@ -6,11 +6,11 @@ export default function Header() {
   const navigator = useNavigate();
   const navigateToCart = () => navigator("/cart");
   return (
-    <header>
+    <header className="flex items-center py-3 justify-between">
       <Logo />
-      <div onClick={navigateToCart}>
-        <p>장바구니</p>
-      </div>
+      <button className="text-lg font-bold px-2" onClick={navigateToCart}>
+        장바구니
+      </button>
     </header>
   );
 }
