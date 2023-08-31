@@ -4,5 +4,6 @@ export default function useRoute() {
   const navigator = useNavigate();
   const navigateToCart = () => navigator("/cart");
   const navigateToHome = () => navigator("/");
-  return { navigateToCart, navigateToHome };
+  const navigateToLogin = () => navigator("/login");
+  return { navigateToCart, navigateToHome, navigateToLogin };
 }
