@@ -3,6 +3,6 @@ import { AuthUser } from "../hooks/useAuthState";
 
 export const userState = atom<AuthUser>({
   key: "userState",
-  default: null,
+  default: undefined,
   dangerouslyAllowMutability: true,
 });

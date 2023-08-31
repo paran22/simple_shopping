@@ -17,7 +17,7 @@ export default function useGoogleAuth() {
   const getUser = () => {
     return auth.currentUser;
   };
-  const signInWithGoogle = () => {
+  const signInWithGoogle = async () => {
     return signInWithPopup(auth, provider)
       .then(() => {
         auth.setPersistence(browserSessionPersistence);

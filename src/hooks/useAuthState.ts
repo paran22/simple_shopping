@@ -9,5 +9,6 @@ export default function useAuthState() {
   const [user, setUser] = useRecoilState(userState);
   const setAuthUser = (user: AuthUser) => setUser(user);
   const isLogin = user !== null;
-  return { setAuthUser, isLogin, user };
+  const isLoading = user === undefined;
+  return { setAuthUser, isLogin, user, isLoading };
 }
